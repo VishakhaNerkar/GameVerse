@@ -1036,6 +1036,7 @@ GameObject:
   - component: {fileID: 1634308231}
   - component: {fileID: 1634308230}
   - component: {fileID: 1634308234}
+  - component: {fileID: 1634308235}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -1114,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634308229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: 0.49, z: 0.2}
+  m_LocalPosition: {x: 7.3, y: 0.49, z: -1.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1137,6 +1138,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1634308235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634308229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd34f8030c6bc43dc960ce388302822f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756745637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1168,7 @@ GameObject:
   - component: {fileID: 1756745645}
   m_Layer: 0
   m_Name: child
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1306,6 +1319,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4310185130256535589, guid: 1a1d0b63b8f814fd28142e0b9490c940, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310185130256535589, guid: 1a1d0b63b8f814fd28142e0b9490c940, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4310185130256535609, guid: 1a1d0b63b8f814fd28142e0b9490c940, type: 3}

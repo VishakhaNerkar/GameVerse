@@ -350,6 +350,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/scripts/childFollower.cs"
 "Assets/scripts/cubeMovement.cs"
+"Assets/scripts/enemyMovement.cs"
 -langversion:9.0
 
 /deterministic
