@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5247174916063618365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1593135881247166723, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485448288926476135, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21191525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485448288926476135, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485448288926476135, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775629245712739932, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801257703275554988, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
+      propertyPath: m_Name
+      value: GreenPowerUp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d91d2dded64a3142a9708e217c39855, type: 3}
