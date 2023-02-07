@@ -83,6 +83,7 @@ public class CameraManager : MonoBehaviour {
 		HandleRotations(Time.deltaTime, v, h, targetSpeed); //Rotates camera
 	}
 
+	
 	private void LateUpdate()
 	{
 		//Here begins the code that is responsible for bringing the camera closer by detecting wall
@@ -102,6 +103,7 @@ public class CameraManager : MonoBehaviour {
 		if (dist > cameraDist) dist = cameraDist;
 		camTrans.localPosition = new Vector3(0, 0, -dist);
 	}
+	
 
 	public static CameraManager singleton; //You can call CameraManager.singleton from other script (There can be only one)
 	void Awake()
