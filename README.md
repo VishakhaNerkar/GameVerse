@@ -1,4 +1,4 @@
-o# GameVerse
+# GameVerse
 
 Simple overview of use/purpose.
 
