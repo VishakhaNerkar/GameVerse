@@ -1,4 +1,4 @@
-# GameVerse
+o# GameVerse
 
 Simple overview of use/purpose.
 
@@ -57,15 +57,32 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 * 0.2
     * Various bug fixes and optimizations
     * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+* Week 6
+    * Your Prototype should be playable and should showcase the game’s basic mechanics as well as include a clear goal and end state.
+    * Your WebGL build is updated to the latest version before class, and is linked under Week 6, along with the gameplay recording
+    * Game should have 2 analytics stats working in the WebGL build.
+    * Analytics sketch should be shown along with the graph from actual data. You need to provide justification for each selected stat, i.e. how does the stat help you       improve your game? 
+    * GDD should be up to date with all information in accordance with the template and the homework assigned so far. 
+    * Teams should have specific roles assigned to all members and feedback from playtest sessions and staff is present in GDD.
+    * Task sheet should be filled in with all unique individual task assignments and with links as mentioned in the announcements
+    * Read further details for info on presentation format, and the grading rubric.
+    * Link: https://docs.google.com/document/d/1eWDFa0ssrr0wcwZmZxdzedQJPAJ7BFPaOuX5LLnlAN0/edit#heading=h.odwo24dxchcn
 
 ## Current Tasks
 
-- [ ] Add project boilerplate automatically for different languages and frameworks
-- [ ] Add GUI
-- [ ] Add Documentations
-- [ ] Add More Commands
+- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) <Akshay> <Gurunadh>
+- [ ] Replace flag with virtual line to End Game <Shalin>
+- [ ] Improve camera alignment <Vardhan>
+- [ ] Red/Green Power dissapear on pickup <Venkatesh>
+- [ ] Change Timer Code <Vardhan>
+- [ ] Diversion and Merge Path in Platform <Akshay> <Gurunadh>
+- [ ] DeltaTime to make game smooth OR Increase FPS  <Vardhan>
+- [ ] Fading Out Effect for Wall on passing <Shalin>
+- [ ] 2 Game Analytics <Meghana> <Vishakha>
+- [ ] Updating GDD (Add Feedback from plytest sessions and staff) <Venkatesh>
+- [x] Assign Roles to Team Memeber - <Venkatesh>
+- [ ] Checkpoint on Junior Programming pathway - at least the first module should be complete <ALL>
+- [x] List of Game Mechanics - <Venkatesh>
 
 
 ## Future Updates
