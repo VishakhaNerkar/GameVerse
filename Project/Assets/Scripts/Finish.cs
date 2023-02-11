@@ -5,11 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public GameObject Pole;
+    public float threshold = 0.1f;
+	public GameObject Player;
+
+    private void Update()
     {
-        if (other.gameObject.name == "Player")
+        Vector3 polePosition = Pole.transform.position;
+        Vector3 playerPosition = Player.transform.position;
+		//Debug.Log(polePosition.z,playerPosition.z);
+
+        if (Mathf.Abs(playerPosition.z - polePosition.z) < threshold)
         {
-            other.gameObject.SendMessage("EndTimer");
+          Player.gameObject.SendMessage("EndTimer");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
