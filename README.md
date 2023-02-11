@@ -93,6 +93,12 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 - [ ] Add More Commands
 
 ## License
+   
+## References
+* https://docs.google.com/spreadsheets/d/14Jj4cYcg0Hmtq_io8J1Yxeeo2FV8DxA6cmSwUXjF9io/edit#gid=584477860
+* https://littlealchemy.com/
+* https://www.youtube.com/watch?v=cf5vC4GU3ik
+ 
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
