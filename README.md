@@ -10,12 +10,12 @@ An in-depth paragraph about your project and overview of use.
 
 | Team Member   | Email       | Role          |
 | :-------------: | :-------------: | :-------------: | 
-| Vishakha Nerkar  | nerkar@usc.edu         | Team Member  |
-| Akshay Jain  | Email         | Team Member  |
-| Shalin Suthar  | Email         | Team Member  |
-| Meghana Putta Swamy  | Email         | Team Member  |
-| Venkatesh Dharmaraj  | Email         | Team Member  |
-| Sai Gurunadh Pamarthi  | Email         | Team Member  |
+| Vishakha Nerkar  | nerkar@usc.edu         | Captain  |
+| Akshay Jain  | jainaksh@usc.edu         | Team Member  |
+| Shalin Suthar  | ssuthar@usc.edu  | Team Member  |
+| Meghana Putta Swamy  | mswamy@usc.edu         | Team Member  |
+| Venkatesh Dharmaraj  | vdharmar@usc.edu         | Team Member  |
+| Sai Gurunadh Pamarthi  | pamarthi@usc.edu         | Team Member  |
 | Vardhan Jekin Shah  | vardhanj@usc.edu        | Team Member  |
 
 ## Getting Started
