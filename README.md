@@ -69,20 +69,38 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
     * Link: https://docs.google.com/document/d/1eWDFa0ssrr0wcwZmZxdzedQJPAJ7BFPaOuX5LLnlAN0/edit#heading=h.odwo24dxchcn
 
 ## Current Tasks
+ 
+#### All
+- [ ] Checkpoint on Junior Programming pathway - at least the first module should be complete 
+ 
+#### Akshay 
+- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
+- [ ] Diversion and Merge Path in Platform 
 
-- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) (Akshay) (Gurunadh)
-- [ ] Replace flag with virtual line to End Game (Shalin)
-- [ ] Improve camera alignment (Vardhan)
-- [ ] Red/Green Power dissapear on pickup (Venkatesh)
-- [ ] Change Timer Code (Vardhan)
-- [ ] Diversion and Merge Path in Platform (Akshay) (Gurunadh)
-- [ ] DeltaTime to make game smooth OR Increase FPS  (Vardhan)
-- [ ] Fading Out Effect for Wall on passing (Shalin)
-- [ ] 2 Game Analytics <Meghana> (Vishakha)
-- [ ] Updating GDD (Add Feedback from plytest sessions and staff) (Venkatesh)
-- [x] Assign Roles to Team Memeber - (Venkatesh)
-- [ ] Checkpoint on Junior Programming pathway - at least the first module should be complete (ALL)
-- [x] List of Game Mechanics - (Venkatesh)
+#### Gurunadh
+ - [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth)
+ - [ ] Diversion and Merge Path in Platform 
+
+#### Meghana
+- [ ] Integrate 2 working game Analytics 
+
+#### Shalin
+- [ ] Replace flag with virtual line to End Game 
+- [ ] Fading Out Effect for Wall on passing
+
+#### Vardhan
+- [ ] Improve camera alignment 
+- [ ] Change Timer Code 
+- [ ] DeltaTime to make game smooth OR Increase FPS
+- [ ] Prepare List of Game Mechanics - (Venkatesh)
+
+#### Venkatesh
+- [ ] Red/Green Power dissapear on pickup 
+- [ ] Updating GDD (Add Feedback from plytest sessions and staff)
+- [x] Assign Roles to Team Memeber
+
+#### Vishakha
+- [ ] Integrate 2 working game Analytics 
 
 
 ## Future Updates
