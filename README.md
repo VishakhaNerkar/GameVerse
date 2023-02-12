@@ -85,8 +85,8 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 - [ ] Integrate 2 working game Analytics 
 
 #### Shalin
-- [ ] Replace flag with virtual line to End Game 
-- [ ] Fading Out Effect for Wall on passing
+- [x] Replace flag with virtual line to End Game 
+- [x] Fading Out Effect for Wall on passing
 
 #### Vardhan
 - [ ] Improve camera alignment 
