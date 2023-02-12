@@ -10,13 +10,13 @@ An in-depth paragraph about your project and overview of use.
 
 | Team Member   | Email       | Role          |
 | :-------------: | :-------------: | :-------------: | 
-| Vishakha Nerkar  | nerkar@usc.edu         | Captain  |
-| Akshay Jain  | jainaksh@usc.edu         | Team Member  |
-| Shalin Suthar  | ssuthar@usc.edu  | Team Member  |
-| Meghana Putta Swamy  | mswamy@usc.edu         | Team Member  |
-| Venkatesh Dharmaraj  | vdharmar@usc.edu         | Team Member  |
-| Sai Gurunadh Pamarthi  | pamarthi@usc.edu         | Team Member  |
-| Vardhan Jekin Shah  | vardhanj@usc.edu        | Team Member  |
+| Vishakha Nerkar  | nerkar@usc.edu         | Captain, Analytics|
+| Akshay Jain  | jainaksh@usc.edu         | Mechanics, Physics  |
+| Shalin Suthar  | ssuthar@usc.edu  | UI, Physics  |
+| Venkatesh Dharmaraj  | vdharmar@usc.edu         | Note Taker, Gameplay  |
+| Meghana Putta Swamy  | mswamy@usc.edu         | PM, Analytics  |
+| Sai Gurunadh Pamarthi  | pamarthi@usc.edu         | Mechanics, Physics  |
+| Vardhan Jekin Shah  | vardhanj@usc.edu        | UI, Mechanics  |
 
 ## Getting Started
 
