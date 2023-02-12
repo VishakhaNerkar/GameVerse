@@ -198,4 +198,11 @@ public class CharacterControls : MonoBehaviour {
 			canMove = true;
 		}
 	}
+	private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "PowerUp")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
