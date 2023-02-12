@@ -95,7 +95,7 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 - [ ] Prepare List of Game Mechanics - (Venkatesh)
 
 #### Venkatesh
-- [ ] Red/Green Power dissapear on pickup 
+- [x] Red/Green Power dissapear on pickup 
 - [ ] Updating GDD (Add Feedback from plytest sessions and staff)
 - [x] Assign Roles to Team Memeber
 
