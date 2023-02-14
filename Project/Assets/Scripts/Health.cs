@@ -3,31 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
+using System.Globalization;
+using UnityEngine.Networking;
+using System.Diagnostics;
 
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    [SerializeField]
+    public string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFdXylIKiPWuHQ2m9hdbRaK1hHstuWulbwfwRq8cb14sOR7w/formResponse";
 
     public int maxHealth = 3;
     public int currentHealth;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public string successStat = "fail";
+    public long sessionID;
+    public int attempt = 1;
 
     void Start()
     {
         currentHealth = maxHealth;
+        sessionID = DateTime.Now.Ticks;
+        attempt = 1;
+
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        successStat = "fail";
+        
+        float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
 
-        if(currentHealth <= 0)
+        StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString()));
+
+        if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
+
+        attempt += 1;
     }
+
 
     void Update()
     {
@@ -52,7 +73,30 @@ public class Health : MonoBehaviour
         }
     }
 
+    private IEnumerator Post(string sessionID, string attempt, string successStat, string timeTaken)
+    {
+        // Create the form and enter responses
+        WWWForm form = new WWWForm();
+        form.AddField("entry.187399815", sessionID);
+        form.AddField("entry.1525527248", attempt);
+        form.AddField("entry.721119709", timeTaken);
+        form.AddField("entry.504638561", successStat);
 
+        // Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
+        {
+            yield return www.SendWebRequest();
 
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                UnityEngine.Debug.Log(www.error);
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Form upload complete!");
+            }
+        }
+    }
+ 
 
 }

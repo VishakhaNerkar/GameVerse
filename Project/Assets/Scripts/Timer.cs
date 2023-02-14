@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     private float startTime;
     private bool finished = false;
     public static float timeElapsed = 0;
+    public float timeTaken = timeElapsed;
     
     void Start()
     {
@@ -30,6 +31,7 @@ public class Timer : MonoBehaviour
 
         float t = Time.time - startTime;
         timeElapsed = t;
+        timeTaken = timeElapsed;
 
         string minutes = ((int)t / 60).ToString();
         string seconds = ((int)t % 60).ToString();

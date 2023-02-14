@@ -13,6 +13,7 @@ public class Neutralize : MonoBehaviour
 
             GameObject playerGameObj = other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
             PowerUpTags powerUpTags = other.gameObject.GetComponent<PowerUpTags>();
+            powerUpTags.EmptyPowerUps();
             playerGameObj.GetComponent<SkinnedMeshRenderer>().material = powerUpTags.GetDefaultMaterial();
             
            

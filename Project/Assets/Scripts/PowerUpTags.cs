@@ -36,6 +36,10 @@ public class PowerUpTags : MonoBehaviour
         return defaultMaterial;
     }
 
+    public void EmptyPowerUps()
+    {
+        _powerUps.Clear();
+    }
 
 
 

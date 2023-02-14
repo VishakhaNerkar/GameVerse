@@ -25,6 +25,7 @@ public class PowerUpBase : MonoBehaviour
             PowerUpTags powerUpTags = other.gameObject.GetComponent<PowerUpTags>();
             List<string> powerUps = powerUpTags.All;
             string powerUpName = this.gameObject.tag;
+            powerUpTags.EmptyPowerUps();
             powerUpTags.AddPowerUps(powerUpName);
 
             //Destroy(this.gameObject);
