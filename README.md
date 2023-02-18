@@ -74,7 +74,8 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 - [ ] Cohesive 
 
 #### Akshay 
-- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
+- [ ] Improve camera alignment 
+- [ ] Fix player movement
 - [ ] Include 2 more analytics to track in your game. ( if the player is hitting the checkpoints in your game, or if they are using the tools (collectibles, materials, powerups, etc) you gave them in the way you expected them to.)
 - [ ] Fix player movement
 
@@ -86,10 +87,10 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 #### Shalin
 - [ ] Make geometry in between you and the character translucent otherwise its hard to see
+- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
 
 #### Vardhan
-- [ ] Improve camera alignment 
-- [ ] Fix player movement
+- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
 
 #### Venkatesh
 - [ ] Generate graphs for the first two metrics with real-time data, and update your GDD. Provide a short commentary on their relevance. 
