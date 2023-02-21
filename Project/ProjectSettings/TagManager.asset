@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Wood
+  - Fire
+  - Water
+  - Slide
+  - cp1
+  - cp2
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,14 +16,23 @@ public class PowerUpBase : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-            Material gameObjMaterial = meshRenderer.material;
-            UnityEngine.Debug.Log("Applied Material: " + gameObjMaterial.name);
+            MeshRenderer powerUpMeshRenderer = GetComponent<MeshRenderer>();
+            Material powerUpMaterial = powerUpMeshRenderer.material;
             
-            GameObject rig = other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject; 
-            rig.GetComponent<SkinnedMeshRenderer>().material = gameObjMaterial;
+            GameObject playerGameObj = other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject; 
+            playerGameObj.GetComponent<SkinnedMeshRenderer>().material = powerUpMaterial;
 
-            //OnPickup();
+            PowerUpTags powerUpTags = other.gameObject.GetComponent<PowerUpTags>();
+            List<string> powerUps = powerUpTags.All;
+            string powerUpName = this.gameObject.tag;
+            powerUpTags.EmptyPowerUps();
+            powerUpTags.AddPowerUps(powerUpName);
+
+            //Destroy(this.gameObject);
+            
+        
+
+            OnPickup();
         }
 
     }
