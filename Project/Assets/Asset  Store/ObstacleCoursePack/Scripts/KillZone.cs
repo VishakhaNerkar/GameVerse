@@ -13,7 +13,8 @@ public class KillZone : MonoBehaviour
             var healthComponent = col.gameObject.GetComponent<Health>();
             if(healthComponent!= null)
             {
-                healthComponent.TakeDamage(1);
+                Vector3 fallCoordinates = col.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+                healthComponent.TakeDamage(1,fallCoordinates);
             }
             col.gameObject.GetComponent<Timer>().RestartTimer();
 			col.gameObject.GetComponent<CharacterControls>().LoadCheckPoint();

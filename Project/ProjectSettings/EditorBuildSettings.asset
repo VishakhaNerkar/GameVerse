@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Scene 1.unity
     guid: 25e7bd7f2448bb7438d114e1cff58d7b
   - enabled: 1
-    path: Assets/Scenes/Level_1 Improved.unity
-    guid: c0f74c224798fb74e8408767cbe0fcda
+    path: Assets/Scenes/Level 01 (WaterWood).unity
+    guid: aa7240732b16005479f081a84bb67fcb
   - enabled: 1
     path: Assets/Scenes/End Scene.unity
     guid: cecf7d246eee09140b94ff053578950c

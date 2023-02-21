@@ -71,34 +71,36 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 ## Current Tasks
  
 #### All
-- [ ] Cohesive 
-
+- [ ] Checkpoint on Junior Programming pathway - at least the first module should be complete 
+ 
 #### Akshay 
-- [ ] Improve camera alignment 
-- [ ] Fix player movement
-- [ ] Include 2 more analytics to track in your game. ( if the player is hitting the checkpoints in your game, or if they are using the tools (collectibles, materials, powerups, etc) you gave them in the way you expected them to.)
-- [ ] Fix player movement
+- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
+- [ ] Diversion and Merge Path in Platform 
 
 #### Gurunadh
-- [ ] Fix the camera (isometric view)
+ - [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth)
+ - [ ] Diversion and Merge Path in Platform 
 
 #### Meghana
-- [ ] Include 2 more analytics to track in your game. ( if the player is hitting the checkpoints in your game, or if they are using the tools (collectibles, materials, powerups, etc) you gave them in the way you expected them to.)
+- [ ] Integrate 2 working game Analytics 
 
 #### Shalin
-- [ ] Make geometry in between you and the character translucent otherwise its hard to see
-- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
+- [x] Replace flag with virtual line to End Game 
+- [x] Fading Out Effect for Wall on passing
 
 #### Vardhan
-- [ ] Make game Cohesive (rotator + color) and Implement elemental theme (Fire, Water, Earth) 
+- [ ] Improve camera alignment 
+- [ ] Change Timer Code 
+- [ ] DeltaTime to make game smooth OR Increase FPS
+- [ ] Prepare List of Game Mechanics - (Venkatesh)
 
 #### Venkatesh
-- [ ] Generate graphs for the first two metrics with real-time data, and update your GDD. Provide a short commentary on their relevance. 
-- [ ] Update GDD and the task sheet with the class feedback comments and links in the appropriate cells.
-- [ ] Update GDD with potential solutions for each issue and mark the solution(s) your team have implemented
+- [x] Red/Green Power dissapear on pickup 
+- [ ] Updating GDD (Add Feedback from plytest sessions and staff)
+- [x] Assign Roles to Team Memeber
 
 #### Vishakha
-
+- [ ] Integrate 2 working game Analytics 
 
 
 ## Future Updates

@@ -7,6 +7,6 @@ public class GameOverScene : MonoBehaviour
 {
     public void TryAgain()
     {
-        SceneManager.LoadScene("Level_1 Improved");
+        SceneManager.LoadScene("Level 01 (WaterWood)");
     }
 }

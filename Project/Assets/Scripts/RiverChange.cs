@@ -25,8 +25,15 @@ public class RiverChange : MonoBehaviour
 
                 // Set river material to player material
                 GetComponent<Renderer>().material = playerMaterial;
-            }
 
+            } else if(powerUpTags.HasTag("Water")) {
+                // Disable Trigger
+                GetComponent<Collider>().isTrigger = false;
+
+            } else
+            {
+                GetComponent<Collider>().isTrigger = true;  
+            }
 
 
             // GameObject playerGameObj = other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject; 

@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 {
 
     // Start is called before the first frame update
+
     public Text timerText;
     private float startTime;
     private bool finished = false;
@@ -22,6 +23,12 @@ public class Timer : MonoBehaviour
     public void RestartTimer ()
     {
         startTime = Time.time;
+        CheckpointData checkpointData = gameObject.GetComponent<CheckpointData>();
+        if (checkpointData != null)
+        {
+            checkpointData.lastcpTime = startTime;
+            checkpointData.lastcpName = "start";
+        }
     }
 
     // Update is called once per frame

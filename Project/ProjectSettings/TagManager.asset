@@ -8,6 +8,9 @@ TagManager:
   - Wood
   - Fire
   - Water
+  - Slide
+  - Cage
+  - Mountain
   layers:
   - Default
   - TransparentFX
