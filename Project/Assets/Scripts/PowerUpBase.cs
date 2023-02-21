@@ -29,23 +29,18 @@ public class PowerUpBase : MonoBehaviour
             powerUpTags.AddPowerUps(powerUpName);
 
             //Destroy(this.gameObject);
-            
-        
+
+            SpecialBunny specialBunny = other.gameObject.GetComponent<SpecialBunny>();
+            specialBunny.StopNeutralizeBunny();
+            specialBunny.NeutralizeBunny();
+
+
+
 
             OnPickup();
         }
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

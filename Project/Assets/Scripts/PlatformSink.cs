@@ -13,23 +13,20 @@ public class PlatformSink : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            isFalling= true;
-            Destroy(gameObject, 5);
+            PowerUpTags powerUpTags = GameObject.FindWithTag("Player").GetComponent<PowerUpTags>();
+            if (powerUpTags.HasTag("Wood") == false)
+            {
+                isFalling = true;
+                Destroy(gameObject, 5);
+            }
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(isFalling)
         {
-            PowerUpTags powerUpTags = GameObject.FindWithTag("Player").GetComponent<PowerUpTags>();
-            if (powerUpTags.HasTag("Wood"))
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y - sinkSpeed, transform.position.z);
-            } else {
-               
-            }
-            
+            transform.position = new Vector3(transform.position.x, transform.position.y - sinkSpeed, transform.position.z);    
         }
     }
 }

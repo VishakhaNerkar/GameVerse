@@ -9,8 +9,8 @@ TagManager:
   - Fire
   - Water
   - Slide
-  - cp1
-  - cp2
+  - Cage
+  - Mountain
   layers:
   - Default
   - TransparentFX

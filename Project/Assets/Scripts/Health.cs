@@ -40,11 +40,14 @@ public class Health : MonoBehaviour
         float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
 
         string x_pos = fallCoordinates.x.ToString();
-        string y_pos = fallCoordinates.y.ToString();
-        print(x_pos);
-        print(y_pos);
+        string z_pos = fallCoordinates.z.ToString();
 
-        StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString()));
+        string obstacle1 = GameObject.Find("Obstacle1").GetComponent<SavPos>().obstacle1;
+        string obstacle2 = GameObject.Find("Obstacle2").GetComponent<SavPos>().obstacle2;
+        string obstacle3 = GameObject.Find("Obstacle3").GetComponent<SavPos>().obstacle3;
+        string obstacle4 = GameObject.Find("Obstacle4").GetComponent<SavPos>().obstacle4;
+
+        StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString(), x_pos, z_pos, obstacle1, obstacle2, obstacle3, obstacle4));
 
         if (currentHealth <= 0)
         {
@@ -78,7 +81,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    private IEnumerator Post(string sessionID, string attempt, string successStat, string timeTaken)
+    private IEnumerator Post(string sessionID, string attempt, string successStat, string timeTaken, string x_pos, string z_pos, string obstacle1, string obstacle2, string obstacle3, string obstacle4)
     {
         // Create the form and enter responses
         WWWForm form = new WWWForm();
@@ -86,6 +89,12 @@ public class Health : MonoBehaviour
         form.AddField("entry.1525527248", attempt);
         form.AddField("entry.721119709", timeTaken);
         form.AddField("entry.504638561", successStat);
+        form.AddField("entry.1568785842", x_pos);
+        form.AddField("entry.1440234542", z_pos);
+        form.AddField("entry.227985466", obstacle1);
+        form.AddField("entry.1919252074", obstacle2);
+        form.AddField("entry.1373993647", obstacle3);
+        form.AddField("entry.1409553061", obstacle4);
 
         // Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
@@ -102,6 +111,6 @@ public class Health : MonoBehaviour
             }
         }
     }
- 
+
 
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SavPos : MonoBehaviour
 {
+    public string obstacle1 = "";
+    public string obstacle2 = "";
+    public string obstacle3 = "";
+    public string obstacle4 = "";
 
     void OnTriggerEnter(Collider col)
     {
@@ -14,9 +18,18 @@ public class SavPos : MonoBehaviour
             float currentcpTime = Time.time;
             string cpName = gameObject.name;
             checkpointData.updateCheckpointData(currentcpTime, cpName);
+            Neutralize(col);
             sendCheckpointData(lastcpTime, currentcpTime, cpName);
 
         }
+    }
+
+    public void Neutralize(Collider col)
+    {
+        GameObject playerGameObj = col.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+        PowerUpTags powerUpTags = col.gameObject.GetComponent<PowerUpTags>();
+        powerUpTags.EmptyPowerUps();
+        playerGameObj.GetComponent<SkinnedMeshRenderer>().material = powerUpTags.GetDefaultMaterial();
     }
 
     void sendCheckpointData(float lastcpTime, float currentcpTime, string cpName) 
@@ -31,8 +44,25 @@ public class SavPos : MonoBehaviour
 
         string timeText = minutes + " : " + seconds;
 
-        print(cpName);
-        print(timeText);
+        if (cpName == "Obstacle1")
+        {
+            obstacle1 = timeText;
+        }
+        else if (cpName == "Obstacle2")
+        {
+            obstacle2 = timeText;
+        }
+        else if (cpName == "Obstacle3")
+        {
+            obstacle3 = timeText;
+        }
+        else
+        {
+            obstacle4 = timeText;
+        }
+
+
+
     }
 
 

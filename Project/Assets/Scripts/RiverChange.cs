@@ -29,6 +29,7 @@ public class RiverChange : MonoBehaviour
             } else if(powerUpTags.HasTag("Water")) {
                 // Disable Trigger
                 GetComponent<Collider>().isTrigger = false;
+
             } else
             {
                 GetComponent<Collider>().isTrigger = true;  
