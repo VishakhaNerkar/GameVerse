@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpecialBunny : MonoBehaviour
 {
-    private static float normalJumpHeight = 0f;
+
     private static float normalSpeed = 0f;
     public float waterSpeed = 19f;
     public float woodSpeed = 11f;
@@ -15,7 +15,6 @@ public class SpecialBunny : MonoBehaviour
     void Start()
     {
         CharacterControls characterControls = this.gameObject.GetComponent<CharacterControls>();
-        normalJumpHeight = characterControls.jumpHeight;
         normalSpeed = characterControls.speed;
         CR_running= false;
         coroutine = Neutralize();
@@ -29,16 +28,10 @@ public class SpecialBunny : MonoBehaviour
         CharacterControls characterControls = this.gameObject.GetComponent<CharacterControls>();
         if (powerUpTags.HasTag("Water"))
         {
-            characterControls.jumpHeight = 0;
-            characterControls.speed = waterSpeed;
         } else if (powerUpTags.HasTag("Wood"))
         {
-            characterControls.jumpHeight = normalJumpHeight;
-            characterControls.speed = woodSpeed;
         } else
         {
-            characterControls.jumpHeight = normalJumpHeight;
-            characterControls.speed = normalSpeed;
         }
     }
 

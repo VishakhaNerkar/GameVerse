@@ -11,6 +11,7 @@ TagManager:
   - Slide
   - Cage
   - Mountain
+  - Gate
   layers:
   - Default
   - TransparentFX

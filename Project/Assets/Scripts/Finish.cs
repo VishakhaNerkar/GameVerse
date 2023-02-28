@@ -21,8 +21,17 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        print("On Trigger called");
+        if (other.gameObject.tag == "Player")
         {
+            if(checkAllPlayersInside())
+            {
+                print("All Players Inside");
+            } else
+            {
+                print("All Players Not Inside");
+            }
+            /*
             other.gameObject.SendMessage("EndTimer");
 
             int attempt = other.gameObject.GetComponent<Health>().attempt;
@@ -40,7 +49,31 @@ public class Finish : MonoBehaviour
             StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString(), "", "", obstacle1, obstacle2, obstacle3, obstacle4));
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            */
         }
+    }
+
+    private bool checkAllPlayersInside()
+    {
+        GameObject[] gameCubes = GameObject.FindGameObjectsWithTag("Player");
+        Collider collider = GetComponent<Collider>();
+        for (int i=0; i<gameCubes.Length; i++)
+        {
+            Vector3 playerPosition = gameCubes[i].transform.position;
+
+            if(playerPosition.x < collider.bounds.min.x || playerPosition.x > collider.bounds.max.x)
+            {
+                return false;
+            }
+
+            if (playerPosition.z < collider.bounds.min.z - 1.5f || playerPosition.z > collider.bounds.max.z)
+            {
+                return false;
+            }
+
+        }
+
+        return true;
     }
 
     private IEnumerator Post(string sessionID, string attempt, string successStat, string timeTaken, string x_pos, string z_pos, string obstacle1, string obstacle2, string obstacle3, string obstacle4)

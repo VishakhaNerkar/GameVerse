@@ -4,32 +4,37 @@ using UnityEngine;
 
 public class AllowSameColor : MonoBehaviour
 {
+
+    public Material myMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myMaterial = GetComponent<Renderer>().material;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if(other.gameObject.GetComponent<MeshRenderer>().material.color == GetComponent<Renderer>().material.color)
+            string playerMaterial = other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.name;
+            string gameObjMaterial = myMaterial.name;
+            if (gameObjMaterial.Contains(playerMaterial))
             {
-                Debug.Log("Same Color");
-                GetComponent<Collider>().isTrigger = true;
-            } else
+                print("Don't Lose Life");
+            }
+            else
             {
-                GetComponent<Collider>().isTrigger = false;
-                Debug.Log("Different Color");
+                Vector3 damageCoordinates = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+                print(damageCoordinates);
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                for(int i = 0; i < players.Length; i++)
+                {
+                    players[i].gameObject.GetComponent<Health>().TakeDamage(1, damageCoordinates);
+                }
+
             }
         }
-
     }
 }

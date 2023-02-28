@@ -35,19 +35,19 @@ public class Health : MonoBehaviour
     public void TakeDamage(int amount, Vector3 fallCoordinates)
     {
         currentHealth -= amount;
-        successStat = "fail";
+        //successStat = "fail";
         
-        float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
+        //float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
 
         string x_pos = fallCoordinates.x.ToString();
         string z_pos = fallCoordinates.z.ToString();
 
-        string obstacle1 = GameObject.Find("Obstacle1").GetComponent<SavPos>().obstacle1;
-        string obstacle2 = GameObject.Find("Obstacle2").GetComponent<SavPos>().obstacle2;
-        string obstacle3 = GameObject.Find("Obstacle3").GetComponent<SavPos>().obstacle3;
-        string obstacle4 = GameObject.Find("Obstacle4").GetComponent<SavPos>().obstacle4;
+        //string obstacle1 = GameObject.Find("Obstacle1").GetComponent<SavPos>().obstacle1;
+        //string obstacle2 = GameObject.Find("Obstacle2").GetComponent<SavPos>().obstacle2;
+        //string obstacle3 = GameObject.Find("Obstacle3").GetComponent<SavPos>().obstacle3;
+        //string obstacle4 = GameObject.Find("Obstacle4").GetComponent<SavPos>().obstacle4;
 
-        StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString(), x_pos, z_pos, obstacle1, obstacle2, obstacle3, obstacle4));
+        //StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString(), x_pos, z_pos, obstacle1, obstacle2, obstacle3, obstacle4));
 
         if (currentHealth <= 0)
         {
