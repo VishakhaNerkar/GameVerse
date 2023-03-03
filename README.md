@@ -1,6 +1,6 @@
 # GameVerse
 
-Simple overview of use/purpose.
+Simple overview of use/purpose of the game.
 
 ## Description
 
@@ -47,7 +47,7 @@ command to run if program contains helper info
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info and other details
 
 ex. Dominique Pizzie  
 ex. [@DomPizzie](https://twitter.com/dompizzie)
