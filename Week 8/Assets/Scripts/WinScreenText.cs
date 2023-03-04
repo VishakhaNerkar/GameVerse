@@ -7,27 +7,16 @@ using UnityEngine;
 
 public class WinScreenText : MonoBehaviour
 {
-
     public Text timerText;
-
     // Start is called before the first frame update
     void Start()
     {
-       float t = Timer.timeElapsed;
+        if(timerText == null)
+        {
+            timerText = gameObject.GetComponent<UnityEngine.UI.Text>();
+        }
 
-       string minutes = ((int)t / 60).ToString();
-       string seconds = ((int)t % 60).ToString();
-
-       if (seconds.Length < 2) seconds = "0" + seconds;
-       if (minutes.Length < 2) minutes = "0" + minutes;
-
-
-       timerText.text = minutes + " : " + seconds;
+        timerText.text = Timer.winScreenTimerText;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -10,14 +10,14 @@ public class FrontBackSpeedUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalSpeed = GameObject.Find("Player 1").GetComponent<CharacterControls>().speed;
+        originalSpeed = GameObject.Find("Player 1").GetComponent<TopDownCharacterMover>().moveSpeed;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<CharacterControls>().speed += 10f;
+            other.gameObject.GetComponent<TopDownCharacterMover>().moveSpeed += 10f;
         }
     }
 
@@ -25,7 +25,7 @@ public class FrontBackSpeedUp : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<CharacterControls>().speed = originalSpeed;  
+            other.gameObject.GetComponent<TopDownCharacterMover>().moveSpeed = originalSpeed;  
         }
     }
 

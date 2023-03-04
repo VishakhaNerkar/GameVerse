@@ -9,6 +9,7 @@ public class CharacterSwap : MonoBehaviour
     public List<Transform> possibleCharacters;
     public int whichCharacter = 0;
     private float originalSpeed = 0f;
+    private float originalRotateSpeed = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,8 @@ public class CharacterSwap : MonoBehaviour
         if(character == null && possibleCharacters.Count >= 1)
         {
             character = possibleCharacters[0];
-            originalSpeed = character.GetComponent<CharacterControls>().speed;
+            originalSpeed = character.GetComponent<TopDownCharacterMover>().moveSpeed;
+            originalRotateSpeed = character.GetComponent<TopDownCharacterMover>().rotateSpeed;
         }
         Swap();
     }
@@ -56,14 +58,17 @@ public class CharacterSwap : MonoBehaviour
     {
         character = possibleCharacters[whichCharacter];
 
-        character.GetComponent<CharacterControls>().speed = originalSpeed;
+        character.GetComponent<TopDownCharacterMover>().moveSpeed = originalSpeed;
+        character.GetComponent<TopDownCharacterMover>().rotateSpeed = originalRotateSpeed;
+        character.Find("Pointer").gameObject.SetActive(true);
 
         for (int i=0; i<possibleCharacters.Count; i++)
         {
             if (possibleCharacters[i] != character)
             {
-                possibleCharacters[i].GetComponent<CharacterControls>().speed = 0f;
-                float newSpeed = possibleCharacters[i].GetComponent<CharacterControls>().speed;
+                possibleCharacters[i].GetComponent<TopDownCharacterMover>().moveSpeed = 0f;
+                possibleCharacters[i].GetComponent<TopDownCharacterMover>().rotateSpeed = 0f;
+                possibleCharacters[i].Find("Pointer").gameObject.SetActive(false);
             }
         }
 

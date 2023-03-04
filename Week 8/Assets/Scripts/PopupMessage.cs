@@ -23,7 +23,7 @@ public class PopupMessage : MonoBehaviour
     }
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         textObj.SetActive(false);
     }
 }

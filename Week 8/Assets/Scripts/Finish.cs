@@ -17,16 +17,23 @@ public class Finish : MonoBehaviour
 
     public string successStat = "win";
     public long sessionID;
+    public GameObject confetti;
+    public float nextSceneDelay;
+    public static int sceneIndex;
 
+    void Start()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        print("On Trigger called");
         if (other.gameObject.tag == "Player")
         {
             if(checkAllPlayersInside())
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                confetti.SetActive(true);
+                StartCoroutine(LoadNextScence(nextSceneDelay));
             } else
             {
             }
@@ -51,6 +58,13 @@ public class Finish : MonoBehaviour
             */
         }
     }
+
+    IEnumerator LoadNextScence(float delayTime = 2f)
+    {
+        yield return new WaitForSeconds(delayTime);
+        SceneManager.LoadScene("Win Screen");
+    }
+
 
     private bool checkAllPlayersInside()
     {
