@@ -12,6 +12,8 @@ TagManager:
   - Cage
   - Mountain
   - Gate
+  - Prism
+  - Cube
   layers:
   - Default
   - TransparentFX
@@ -48,4 +50,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PP
+    uniqueID: 1685875645
     locked: 0

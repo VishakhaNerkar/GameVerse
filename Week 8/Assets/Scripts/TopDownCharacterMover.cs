@@ -25,22 +25,29 @@ public class TopDownCharacterMover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
 
         var movementVector = MoveTowardTarget(targetVector);
 
-        RotateTowardMovementVector(movementVector);
+       // RotateTowardMovementVector(movementVector);
     }
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
         var speed = moveSpeed * Time.deltaTime;
+        transform.Translate(targetVector * speed);
+        
+        //var targetPosition =  transform.position + targetVector * speed;
+        //transform.position = targetPosition;
+        /*
+
 
         targetVector = Quaternion.Euler(0, camera.gameObject.transform.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;
         transform.position = targetPosition;
+        */
         return targetVector;
         //transform.Translate(targetVector * speed);
     }

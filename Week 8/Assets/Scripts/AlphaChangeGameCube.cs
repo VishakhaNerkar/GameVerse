@@ -5,14 +5,31 @@ using UnityEngine;
 public class AlphaChangeGameCube : MonoBehaviour
 {
     public float alpha = 0.5f;
+    public GameObject gate;
+    private Collider gateCollider;
 
+    void Start()
+    {
+        gateCollider = gate.GetComponent<Collider>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            ChangeAlpha(alpha);
+            string playerMaterial = other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.name;
+            string frontColor = this.gameObject.transform.GetChild(0).GetComponent<AllowSameColor>().front;
+            if (playerMaterial.Contains(frontColor))
+            {
+                ChangeAlpha(alpha);
+                gateCollider.isTrigger = true;
+            } else
+            {
+
+            }
+
         }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -20,6 +37,7 @@ public class AlphaChangeGameCube : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             ChangeAlpha(1.0f);
+            gateCollider.isTrigger = false;
         }
     }
 

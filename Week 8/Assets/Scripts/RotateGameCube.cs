@@ -22,10 +22,10 @@ public class RotateGameCube : MonoBehaviour
         isBtnPressed = true;
         if (other.gameObject.tag == "Player")
         {
-            gameObject.transform.localScale -= new Vector3(0f, 0.29999f, 0f);
+            gameObject.transform.position -= new Vector3(0f, 0.4f, 0f);
             for(int i=0; i<gameCubes.Length; i++)
             {
-                StartCoroutine(RotateMe(Vector3.right * 90, 0.3f, gameCubes[i].transform.GetChild(3).transform));
+                StartCoroutine(RotateMe(Vector3.right * 90, 0.7f, gameCubes[i].transform.GetChild(3).transform));
                 RotateCenter(gameCubes[i]);
                 
             }
@@ -38,10 +38,10 @@ public class RotateGameCube : MonoBehaviour
         isBtnPressed = false;
         if (other.gameObject.tag == "Player")
         {
-            gameObject.transform.localScale += new Vector3(0f, 0.29999f, 0f);
+            gameObject.transform.position += new Vector3(0f, 0.4f, 0f);
             for (int i = 0; i < gameCubes.Length; i++)
             {
-                StartCoroutine(RotateMe(Vector3.right * 90, 0.3f, gameCubes[i].transform.GetChild(3).transform));
+                StartCoroutine(RotateMe(Vector3.right * 90, 0.7f, gameCubes[i].transform.GetChild(3).transform));
                 RotateCenter(gameCubes[i]);
             }
         }
@@ -81,13 +81,17 @@ public class RotateGameCube : MonoBehaviour
 
         
         var fromAngle = transform.rotation;
-        var toAngle = Quaternion.Euler(transform.eulerAngles + byAngles);
+        //var toAngle = Quaternion.Euler(transform.eulerAngles + byAngles);
+        var toAngle = Quaternion.Euler(byAngles) * fromAngle;
         for (var t = 0f; t < 1; t += Time.deltaTime / inTime)
         {
             transform.rotation = Quaternion.Slerp(fromAngle, toAngle, rotationSpeed * t);
             yield return null;
         }
         
+
+
+
 
     }
 

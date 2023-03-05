@@ -28,15 +28,16 @@ public class AllowSameColor : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             string playerMaterial = other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.name;
-            print(playerMaterial);
             string gameObjMaterial = myMaterial.name;
 
             if (playerMaterial.Contains(front))
             {
-                print("No Damage");
+                print("Player can enter");
             }
             else
             {
+                print("Player Cannot Enter");
+                /*
                 Vector3 damageCoordinates = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
                 print(damageCoordinates);
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -44,6 +45,7 @@ public class AllowSameColor : MonoBehaviour
                 {
                     players[i].gameObject.GetComponent<Health>().TakeDamage(1, damageCoordinates);
                 }
+                */
 
             }
         }
