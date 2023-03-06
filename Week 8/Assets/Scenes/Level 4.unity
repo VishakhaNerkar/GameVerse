@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2033035847}
   timeTaken: 9.986767
-  timeLeft: 100
+  timeLeft: 200
   timerOn: 0
 --- !u!1 &94843216
 GameObject:
@@ -12849,7 +12849,7 @@ MonoBehaviour:
   gameCubes:
   - {fileID: 1547304676}
   y_RoationAngle: 90
-  rotationSpeed: 5
+  rotationSpeed: 20
 --- !u!23 &1022074594
 MeshRenderer:
   m_ObjectHideFlags: 0
