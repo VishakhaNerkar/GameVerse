@@ -7,9 +7,11 @@ public class LoadScene : MonoBehaviour
 {
 
     public int levelIndex;
+    public string sceneName;
 
     void Start() {
         levelIndex =  SceneManager.GetActiveScene().buildIndex;
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     public void LoadNextScene()
@@ -32,4 +34,28 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    void FixedUpdate() {
+        if(sceneName == "Win Screen") {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(Finish.sceneIndex + 1);
+            }
+        }
+
+        if(sceneName == "Timeup Screen") {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(Finish.sceneIndex);
+            }     
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SceneManager.LoadScene(1);
+            }    
+
+
+        }
+    }
+
 }

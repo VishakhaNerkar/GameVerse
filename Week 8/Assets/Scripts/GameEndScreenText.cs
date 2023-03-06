@@ -9,4 +9,11 @@ public class GameEndScreenText : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelection");
     }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("LevelSelection");
+        }
+    }
 }

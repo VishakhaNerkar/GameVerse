@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 68504755}
   - component: {fileID: 68504754}
   - component: {fileID: 68504756}
+  - component: {fileID: 68504757}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -265,6 +266,18 @@ MonoBehaviour:
   timeTaken: 9.985335
   timeLeft: 30
   timerOn: 0
+--- !u!114 &68504757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68504753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e66ab538ad739441b60219191891412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &94843216
 GameObject:
   m_ObjectHideFlags: 0
@@ -10754,6 +10767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  sceneName: 
 --- !u!114 &688520181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12519,6 +12533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  sceneName: 
 --- !u!1 &1574603035
 GameObject:
   m_ObjectHideFlags: 0

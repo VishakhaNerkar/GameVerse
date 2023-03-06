@@ -49,9 +49,9 @@ public class Health : MonoBehaviour
 
         //StartCoroutine(Post(sessionID.ToString(), attempt.ToString(), successStat, timeTaken.ToString(), x_pos, z_pos, obstacle1, obstacle2, obstacle3, obstacle4));
 
-        if (currentHealth <= 0)
+        if (currentHealth < 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("NoHealth Screen");
         }
 
         attempt += 1;

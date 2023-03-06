@@ -140,32 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50b4c8d79ff51c49ba78e9455603280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &10157743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10157741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca531eae1bc8fdf458866b1a589ed31d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFdXylIKiPWuHQ2m9hdbRaK1hHstuWulbwfwRq8cb14sOR7w/formResponse
-  maxHealth: 3
-  currentHealth: 0
-  hearts:
-  - {fileID: 1121169559}
-  - {fileID: 1903685900}
-  - {fileID: 1938703939}
-  - {fileID: 445827268}
-  - {fileID: 387223659}
-  fullHeart: {fileID: 21300000, guid: 0cc76e83629d94244a15f0faa643725c, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 40a63608d531f2b429ec005e98a10a97, type: 3}
-  successStat: fail
-  sessionID: 0
-  attempt: 1
 --- !u!114 &10157744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +374,7 @@ GameObject:
   - component: {fileID: 68504755}
   - component: {fileID: 68504754}
   - component: {fileID: 68504756}
+  - component: {fileID: 68504757}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -456,6 +431,32 @@ MonoBehaviour:
   timeTaken: 9.986767
   timeLeft: 200
   timerOn: 0
+--- !u!114 &68504757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68504753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca531eae1bc8fdf458866b1a589ed31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFdXylIKiPWuHQ2m9hdbRaK1hHstuWulbwfwRq8cb14sOR7w/formResponse
+  maxHealth: 3
+  currentHealth: 0
+  hearts:
+  - {fileID: 1121169559}
+  - {fileID: 1903685900}
+  - {fileID: 1938703939}
+  - {fileID: 445827268}
+  - {fileID: 387223659}
+  fullHeart: {fileID: 21300000, guid: 0cc76e83629d94244a15f0faa643725c, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 40a63608d531f2b429ec005e98a10a97, type: 3}
+  successStat: fail
+  sessionID: 0
+  attempt: 1
 --- !u!1 &72112049
 GameObject:
   m_ObjectHideFlags: 0
@@ -6008,32 +6009,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0943c796a29ee204ab5634ee50637cca, type: 3}
   m_PrefabInstance: {fileID: 531594007}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &286867886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286867880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca531eae1bc8fdf458866b1a589ed31d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFdXylIKiPWuHQ2m9hdbRaK1hHstuWulbwfwRq8cb14sOR7w/formResponse
-  maxHealth: 3
-  currentHealth: 0
-  hearts:
-  - {fileID: 1121169559}
-  - {fileID: 1903685900}
-  - {fileID: 1938703939}
-  - {fileID: 445827268}
-  - {fileID: 387223659}
-  fullHeart: {fileID: 21300000, guid: 0cc76e83629d94244a15f0faa643725c, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 40a63608d531f2b429ec005e98a10a97, type: 3}
-  successStat: fail
-  sessionID: 0
-  attempt: 1
 --- !u!114 &286867887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6186,9 +6161,7 @@ GameObject:
   - component: {fileID: 345857384}
   - component: {fileID: 345857383}
   - component: {fileID: 345857382}
-  - component: {fileID: 345857381}
   - component: {fileID: 345857379}
-  - component: {fileID: 345857378}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -6196,20 +6169,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &345857378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345857377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd36f8c149354942843a38865a07129, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastcpName: 
-  lastcpTime: 0
 --- !u!114 &345857379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6222,32 +6181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50b4c8d79ff51c49ba78e9455603280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &345857381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345857377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca531eae1bc8fdf458866b1a589ed31d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFdXylIKiPWuHQ2m9hdbRaK1hHstuWulbwfwRq8cb14sOR7w/formResponse
-  maxHealth: 3
-  currentHealth: 0
-  hearts:
-  - {fileID: 1121169559}
-  - {fileID: 1903685900}
-  - {fileID: 1938703939}
-  - {fileID: 445827268}
-  - {fileID: 387223659}
-  fullHeart: {fileID: 21300000, guid: 0cc76e83629d94244a15f0faa643725c, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 40a63608d531f2b429ec005e98a10a97, type: 3}
-  successStat: fail
-  sessionID: 0
-  attempt: 1
 --- !u!114 &345857382
 MonoBehaviour:
   m_ObjectHideFlags: 0
