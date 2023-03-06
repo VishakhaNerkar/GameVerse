@@ -12,7 +12,10 @@ public class Bullet : MonoBehaviour
     }
     void onCollisionEnter(Collision collision)
     {
-        print("Player touches bullet");
+        //Destroy(collision.gameObject);
+    
         Destroy(gameObject);
     }
+
+    
 }

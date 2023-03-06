@@ -26,18 +26,6 @@ public class CharacterSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            if(whichCharacter == 0)
-            {
-                whichCharacter = possibleCharacters.Count - 1;
-            } 
-            else 
-            {
-                whichCharacter -= 1;
-            }
-            Swap();
-        }
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
