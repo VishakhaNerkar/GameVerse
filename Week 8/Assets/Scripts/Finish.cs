@@ -35,8 +35,9 @@ public class Finish : MonoBehaviour
                 GameObject gameManager =  GameObject.Find("GameManager");
                 gameManager.GetComponent<Timer>().timerOn = false;
                 gameManager.GetComponent<CharacterSwap>().UpdateSwapInfo();
-                
+            
                 confetti.SetActive(true);
+                gameManager.GetComponent<Analytics>().SendAnalytics();
                 StartCoroutine(LoadNextScence(nextSceneDelay));
             } else
             {

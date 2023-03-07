@@ -49,6 +49,7 @@ public class Timer : MonoBehaviour
             {
                 timeLeft = 0;
                 timerOn = false;
+                gameObject.GetComponent<Analytics>().SendAnalytics();
                 SceneManager.LoadScene("Timeup Screen");
             }
         }

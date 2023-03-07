@@ -36,7 +36,6 @@ public class Health : MonoBehaviour
     {
            currentHealth -= amount;
         //successStat = "fail";
-        print(currentHealth);
         
         //float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
 
@@ -52,6 +51,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth < 0)
         {
+            gameObject.GetComponent<Analytics>().SendAnalytics();
             SceneManager.LoadScene("NoHealth Screen");
         }
 
@@ -61,7 +61,6 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        print(currentHealth);
         for (int i = 0; i < hearts.Length; i++) {
 
             if(i < currentHealth)

@@ -15,10 +15,14 @@ public class CharacterSwap : MonoBehaviour
     private string lastActivePlayer;
     private int swapCount = 0;
     // Start is called before the first frame update
+
+    public Analytics analytics;
+
     void Start()
     {
         if(character == null && possibleCharacters.Count >= 1)
         {
+            analytics = this.gameObject.GetComponent<Analytics>();
             character = possibleCharacters[0];
             lastActivePlayer = character.gameObject.name;
             lastSwitchTime = 0.0f;
@@ -65,13 +69,16 @@ public class CharacterSwap : MonoBehaviour
             }
         }
 
+        if(swapCount > 0){
         UpdateSwapInfo();
+        } 
+        swapCount += 1;
+
     }
 
     public void UpdateSwapInfo() {
         float newSwitchTime = gameObject.GetComponent<Timer>().timeTaken;
-        print(newSwitchTime - lastSwitchTime);
-        print(lastActivePlayer);
+        analytics.PlayersActiveTime(lastActivePlayer, newSwitchTime - lastSwitchTime);
         lastActivePlayer = character.gameObject.name;
         lastSwitchTime = newSwitchTime;
 
