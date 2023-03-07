@@ -34,8 +34,9 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount, Vector3 fallCoordinates)
     {
-        currentHealth -= amount;
+           currentHealth -= amount;
         //successStat = "fail";
+        print(currentHealth);
         
         //float timeTaken = this.gameObject.GetComponent<Timer>().timeTaken;
 
@@ -60,6 +61,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        print(currentHealth);
         for (int i = 0; i < hearts.Length; i++) {
 
             if(i < currentHealth)

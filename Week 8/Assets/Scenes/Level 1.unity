@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2033035847}
-  timeTaken: 9.985335
+  timeTaken: 0
   timeLeft: 30
   timerOn: 0
 --- !u!114 &68504757
@@ -278,6 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e66ab538ad739441b60219191891412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSwitchOrder: []
+  playerActiveTimeOrder: []
 --- !u!1 &94843216
 GameObject:
   m_ObjectHideFlags: 0

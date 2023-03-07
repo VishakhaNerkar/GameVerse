@@ -32,6 +32,10 @@ public class Finish : MonoBehaviour
         {
             if(checkAllPlayersInside())
             {
+                GameObject gameManager =  GameObject.Find("GameManager");
+                gameManager.GetComponent<Timer>().timerOn = false;
+                gameManager.GetComponent<CharacterSwap>().UpdateSwapInfo();
+                
                 confetti.SetActive(true);
                 StartCoroutine(LoadNextScence(nextSceneDelay));
             } else

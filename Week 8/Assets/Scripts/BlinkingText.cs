@@ -19,7 +19,7 @@ public class BlinkingText : MonoBehaviour
     void Update()
     {
         if(flickeringText != null) {
-            textColor.a = 0.0f + Mathf.PingPong(Time.time * blinkRate, 0.7f);
+            textColor.a = 0.0f + Mathf.PingPong(Time.time * blinkRate, 1.0f);
             flickeringText.color = textColor;
         }
     }

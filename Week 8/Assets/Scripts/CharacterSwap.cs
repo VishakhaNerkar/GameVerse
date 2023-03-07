@@ -11,12 +11,17 @@ public class CharacterSwap : MonoBehaviour
     private float originalSpeed = 0f;
     private float originalRotateSpeed = 0f;
 
+    private float lastSwitchTime;
+    private string lastActivePlayer;
+    private int swapCount = 0;
     // Start is called before the first frame update
     void Start()
     {
         if(character == null && possibleCharacters.Count >= 1)
         {
             character = possibleCharacters[0];
+            lastActivePlayer = character.gameObject.name;
+            lastSwitchTime = 0.0f;
             originalSpeed = character.GetComponent<TopDownCharacterMover>().moveSpeed;
             originalRotateSpeed = character.GetComponent<TopDownCharacterMover>().rotateSpeed;
         }
@@ -60,6 +65,15 @@ public class CharacterSwap : MonoBehaviour
             }
         }
 
+        UpdateSwapInfo();
+    }
+
+    public void UpdateSwapInfo() {
+        float newSwitchTime = gameObject.GetComponent<Timer>().timeTaken;
+        print(newSwitchTime - lastSwitchTime);
+        print(lastActivePlayer);
+        lastActivePlayer = character.gameObject.name;
+        lastSwitchTime = newSwitchTime;
 
     }
 }

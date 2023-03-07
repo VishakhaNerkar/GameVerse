@@ -43,7 +43,7 @@ public class LoadScene : MonoBehaviour
             }
         }
 
-        if(sceneName == "Timeup Screen") {
+        if(sceneName == "Timeup Screen" || sceneName == "NoHealth Screen") {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(Finish.sceneIndex);

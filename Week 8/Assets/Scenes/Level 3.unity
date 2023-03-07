@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2033035847}
   timeTaken: 4.1178994
-  timeLeft: 30
+  timeLeft: 60
   timerOn: 0
 --- !u!114 &68504757
 MonoBehaviour:
@@ -12414,6 +12414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  sceneName: 
 --- !u!114 &680290574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14862,6 +14863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 0
+  sceneName: 
 --- !u!114 &1453967292
 MonoBehaviour:
   m_ObjectHideFlags: 0

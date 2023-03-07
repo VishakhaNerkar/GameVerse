@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Analytics : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    public string[] playerSwitchOrder;
+    public float[] playerActiveTimeOrder;
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
