@@ -11,7 +11,7 @@ public class SetLevelName : MonoBehaviour
 
     void Start()
     {
-        text.text = SceneManager.GetActiveScene().name;
+        // text.text = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
