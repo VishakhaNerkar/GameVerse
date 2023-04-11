@@ -16,6 +16,7 @@ TagManager:
   - Cube
   - Bullet
   - Button
+  - Modal
   layers:
   - Default
   - TransparentFX
